@@ -1,38 +1,49 @@
 
 <div class="container">
   <div class="row">
-  	<div class="col-md-6">
+  	<div class="col-md-8">
     
       <div class="panel panel-default">
 			<div class="panel-body">
 
 				<h1>Cola de votação</h1>
-				<p>
-					URL de edição: <%= link_edit(@cola.id) %>
-					<br />
-					URL de visualização: <%= link_view(@cola.id) %>
-				</p>
+				<div class="row">
+					<div class="col-md-3">
+					Edição:
+					</div>
+					<div class="col-md-9"> 
+					<input type="text" readonly="true" value="<%= link_edit(@cola.id) %>" size="50px;" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3">
+						Visualização:
+					</div>
+					<div class="col-md-9"> 
+						<input type="text" readonly="true" value="<%= link_view(@cola.id) %>" size="50px;" />
+					</div>
+				</div>
 				
 				<% @cola.cola_cargo.each do |c| %>
-					<div class="row">
+					<div class="row" style="background-color: #<%= cor_cargo(c.detalhes_candidatos.length) %>;">
 						<%= c.nome_cargo %>
-						<%= link_to "+", "/roleta/#{@cola.id}/#{c.id_cargo}", class: "btn btn-default" %>
+						<%= link_to "+", "/roleta/#{@cola.id}/#{c.id_cargo}/n", class: "btn btn-info" %>
 						
 						<% if c.detalhes_candidatos != nil && c.detalhes_candidatos.length > 0 %>
 							<% c.detalhes_candidatos.each do |candidato| %>
 								<div class="row">
-									<div class="col-sm-2">
+									<div class="col-sm-1">
 										<a href="javascript:abre_detalhes('<%= candidato["id"] %>')">
 											<img src="<%= candidato["foto"] %>" alt="" class="center-block img-responsive" >
 										</a>
 									</div>
 									<div class="col-sm-6">
 										<a href="javascript:abre_detalhes('<%= candidato["id"] %>')">
-											<%= candidato["apelido"] %>
+											<%= candidato["apelido"] %> (<%= candidato["numero"] %>)
 										</a>
 									</div>
 									<div class="col-sm-2">
-										<%= candidato["numero"] %>
+										<%= candidato["partido"] %>
 									</div>
 									<div class="col-sm-1">
 										<%= link_to "X", "/remove/#{@cola.id}/#{c.id}/#{candidato['id']}", class: "btn btn-danger"  %>

@@ -26,7 +26,7 @@ class Total
   
   def self.soma_recursivo(uf, cargo, pagina)
     puts "pagina = #{pagina}"
-    candidatos = HTTParty.get("http://api.transparencia.org.br/sandbox/v1/candidatos?estado=#{uf}&cargo=#{cargo}&_limit=20&_offset=#{pagina}", :headers => { "App-Token" => ENV['TRANSPARENCIA_TOKEN'] } )
+    candidatos = HTTParty.get("http://api.transparencia.org.br/api/v1/candidatos?estado=#{uf}&cargo=#{cargo}&_limit=20&_offset=#{pagina}", :headers => { "App-Token" => ENV['TRANSPARENCIA_TOKEN'] } )
     if candidatos.length < 20
       puts "fim da lista... retornando #{candidatos.length}"
       return candidatos.length

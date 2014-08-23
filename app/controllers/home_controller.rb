@@ -36,6 +36,10 @@ class HomeController < ApplicationController
     end
   end
   
+  def detalhe_candidato
+    @candidato = detalhes_candidato(params[:candidato_id])
+  end
+  
   def remove
     cola = Cola.find(params[:cola_id])
     cola_cargo = cola.cola_cargo.where(id: params[:cola_cargo_id]).first
@@ -44,6 +48,16 @@ class HomeController < ApplicationController
     respond_to do |format|
       format.html { redirect_to edit_path(cola.id) }
       format.json { render :json => {status: "ok"} }
+    end
+  end
+  
+  def view
+    @cola = Cola.find(params[:id])
+    @cola.cola_cargo.each do |cola_cargo|
+      cola_cargo.detalhes_candidatos = Array.new
+      cola_cargo.candidatos.each do |cand|
+        cola_cargo.detalhes_candidatos << detalhes_candidato(cand)
+      end
     end
   end
   
@@ -67,7 +81,7 @@ class HomeController < ApplicationController
       end
     end
     respond_to do |format|
-      format.html { redirect_to roleta_path(cola.id, params[:cargo_id]) }
+      format.html { redirect_to roleta_path(cola.id, params[:cargo_id], params[:partido]) }
       format.json { render :json => {status: "ok"} }
     end
   end
@@ -82,8 +96,10 @@ class HomeController < ApplicationController
   def roleta
     @cargo_id = params[:cargo]
     @cola = Cola.find(params[:cola_id])
+    @partido = params[:partido]
     rand = rand(0 .. (Total.consulta(@cola.uf, params[:cargo]).quantidade / 10) )
-    @candidato = random_candidato(params[:cargo], @cola.uf, rand)[rand(0 .. 10 )]
+    candidatos = random_candidato(params[:cargo], @cola.uf, @partido, rand)
+    @candidato = candidatos[rand(0 .. candidatos.length-1 )]
     puts @candidato
   end
   

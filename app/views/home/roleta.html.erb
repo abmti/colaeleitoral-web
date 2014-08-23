@@ -1,31 +1,65 @@
 <div class="container">
   <div class="row">
-  	<div class="col-md-6">
+  	<div class="col-md-8">
     
       <div class="panel panel-default">
 			<div class="panel-body">
+					<div class="row">
+						<div class="accordion" id="accordion2">
+						<div class="accordion-group">
+						    <div class="accordion-heading">
+						      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+						        Filtro
+						      </a>
+						    </div>
+						    <div id="collapseOne" class="accordion-body collapse">
+						      <div class="accordion-inner">
+						          <label class="btn btn-default">
+							        <input type="checkbox" name="456"> Apenas candidatos assíduos
+							      </label>
+							      <label class="btn btn-default">
+							      	Partido:&nbsp;
+							         <select class="input-large" id="partido">
+						              <option value="n" <%= (@partido == nil || @partido == "n") ? 'selected' : '' %>>Nenhum</option>
+						              <% lista_partidos.each do |p| %>
+						              	<option value="<%= p["partidoId"] %>" <%= @partido == p["partidoId"] ? 'selected' : '' %>><%= p["sigla"] %></option>
+						              <% end %>
+						            </select>
+							      </label>
+						      </div>
+						      <br />
+						    </div>
+						  </div>
+						 </div>
+					</div>
+					<br />
+					<br />
               		<div class="row">
-              			<div class="col-xs-12 col-sm-4 text-center">
-                                <img src="<%= @candidato["foto"] %>" alt="" class="center-block img-circle img-responsive">
-                        </div><!--/col-->
-                        <div class="col-xs-12 col-sm-8">
-                            <h2><%= @candidato["apelido"] %> (<%= @candidato["numero"] %>)</h2>
-                            <p><strong><%= @candidato["cargo"] %> - </strong> <%= @candidato["estado"] %> </p>
-                            <p><strong><%= @candidato["partido"] %></strong></p>
-                            <p><a href="" data-toggle="modal" data-target="#myModal">+ Info</a></p>
-                            
-                        </div><!--/col-->          
-                        
-
-                        <div class="col-xs-12 col-sm-4">
-                        	<%= link_to "Neim Fudenu", "/avalia/#{@candidato['id']}/#{@cola.id}/#{@cargo_id}/#{@cola.uf}/n", class: "btn btn-primary btn-block"  %>
-                        </div><!--/col-->
-                        <div class="col-xs-12 col-sm-4">
-                        
-                        </div><!--/col-->
-                        <div class="col-xs-12 col-sm-4">
-                        	<%= link_to "Pode Ser", "/avalia/#{@candidato['id']}/#{@cola.id}/#{@cargo_id}/#{@cola.uf}/y", class: "btn btn-success btn-block"  %>
-                        </div><!--/col-->
+              			<% if @candidato != nil %>
+	              			<div class="col-xs-12 col-sm-4 text-center">
+	                                <img src="<%= @candidato["foto"] %>" alt="" class="center-block img-circle img-responsive">
+	                        </div><!--/col-->
+	                        <div class="col-xs-12 col-sm-8">
+	                            <h2><%= @candidato["apelido"] %> (<%= @candidato["numero"] %>)</h2>
+	                            <p><strong><%= @candidato["cargo"] %> - </strong> <%= @candidato["estado"] %> </p>
+	                            <p><strong><%= @candidato["partido"] %></strong></p>
+	                            <p><a href="" data-toggle="modal" data-target="#myModal">+ Info</a></p>
+	                            
+	                        </div><!--/col-->          
+	                        
+	
+	                        <div class="col-xs-12 col-sm-4">
+	                        	<a class="btn btn-primary btn-block" href="javascript: nemfudeno();">Nem Fudenu</a>
+	                        </div><!--/col-->
+	                        <div class="col-xs-12 col-sm-4">
+	                        
+	                        </div><!--/col-->
+	                        <div class="col-xs-12 col-sm-4">
+	                        	<a class="btn btn-success btn-block" href="javascript: podeser();">Pode Ser</a>
+	                        </div><!--/col-->
+	                     <% else %>
+	                     	Candidato não encontrado.
+	                     <% end %>
               		</div><!--/row-->
               </div><!--/panel-body-->
           </div><!--/panel-->
@@ -38,4 +72,22 @@
   </div>
 </div>
 
-<%= render 'popup_candidato', candidato: @candidato %>
+<% if @candidato != nil %>
+	<script>
+		function nemfudeno(){
+			partido = $('#partido option:selected').val();
+			url = "/avalia/<%= @candidato['id'] %>/<%= @cola.id %>/<%= @cargo_id %>/<%= @cola.uf %>/n/"+partido;
+			self.location=url;
+		}
+		
+		function podeser(){
+			partido = $('#partido option:selected').val();
+			url = "/avalia/<%= @candidato['id'] %>/<%= @cola.id %>/<%= @cargo_id %>/<%= @cola.uf %>/y/"+partido;
+			self.location=url;
+		}
+	
+	</script>
+
+	<%= render 'popup_candidato', candidato: @candidato %>
+
+<% end %>

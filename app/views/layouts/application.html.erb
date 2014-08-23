@@ -1,19 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>ColaeleitoralWeb</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>PLEY | tour</title>
+  
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap theme -->
+  <link href="/assets/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+  <!-- owl carousel css -->
+  <link href="/assets/js/owl-carousel/owl.carousel.css" rel="stylesheet">
+  <link href="/assets/js/owl-carousel/owl.theme.css" rel="stylesheet">
+  <link href="/assets/js/owl-carousel/owl.transitions.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="/assets/css/styles.css" rel="stylesheet">
   
-  <link href="/css/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
-  
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false">
+    </script>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
 </head>
+
 <body>
+
 
 <%= yield %>
 
-<script src="/js/plugins/bootstrap/bootstrap.min.js"></script>
+
+<!-- Javascripts
+================================================== -->
+
+<!-- Jquery and Bootstrap JS -->
+<script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Easing - for transitions and effects -->
+<script src="/assets/js/jquery.easing.1.3.js"></script>
+
+<!-- background image strech script -->
+<script src="/assets/js/jquery.backstretch.min.js"></script>
+<!-- background image fix for IE 9 or less
+   - use same background as set above to <body> -->
+<!--[if lt IE 9]>
+<script type="text/javascript">
+    $(document).ready(function(){
+      jQuery("#outer-background-container").backstretch("/assets/images/other_images/bg5.jpg");
+    });
+    </script>
+<![endif]-->
+
+<!-- detect mobile browsers -->
+<script src="/assets/js/detectmobilebrowser.js"></script>
+
+<!-- owl carousel js -->
+<script src="/assets/js/owl-carousel/owl.carousel.min.js"></script>
+
+<!-- Custom functions for this theme -->
+<script src="/assets/js/functions.min.js"></script>
+<script src="/assets/js/initialise-functions.js"></script>
+
+<!-- IE9 form fields placeholder fix -->
+<!--[if lt IE 9]>
+<script>contact_form_IE9_placeholder_fix();</script>
+<![endif]-->
 
 </body>
 </html>

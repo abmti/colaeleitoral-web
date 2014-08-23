@@ -4,6 +4,7 @@ ColaeleitoralWeb::Application.routes.draw do
   
   get 'index', to: 'home#index'
   get 'estados', to: 'home#estados', as: 'estados'
+  get 'partidos', to: 'home#partidos', as: 'partidos'
   get 'cola/:uf', to: 'home#cola', as: 'cola'
   get 'cola/:uf/:device_id', to: 'home#cola', as: 'cola_mobile'
   get 'edit/:id', to: 'home#edit', as: 'edit'

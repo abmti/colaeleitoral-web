@@ -1,9 +1,9 @@
 
 development:
-  transparencia_token: "CAMaf07DbAma"
+  transparencia_token: "Gyj70asfONSf"
   
 test:
-  transparencia_token: "CAMaf07DbAma"
+  transparencia_token: "Gyj70asfONSf"
   
 production:
-  transparencia_token: "CAMaf07DbAma"
+  transparencia_token: "Gyj70asfONSf"

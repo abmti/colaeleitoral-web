@@ -4,14 +4,22 @@ require 'httparty'
 module HomeHelper
   
   def lista_estados
-    estados = HTTParty.get("http://api.transparencia.org.br/sandbox/v1/estados", :headers => { "App-Token" => ENV['TRANSPARENCIA_TOKEN'] } )
-    estados_sem_br = Array.new
-    estados.each do |e|
-      if e["estadoId"] != "0"
-        estados_sem_br << e
-      end
-    end
-    estados_sem_br
+    Estado.all
+  end
+  
+  def detalhes_candidato(candidato_id)
+    candidato = HTTParty.get("http://api.transparencia.org.br/sandbox/v1/candidatos/#{candidato_id}", :headers => { "App-Token" => ENV['TRANSPARENCIA_TOKEN'] } )
+    candidato
+  end
+  
+  def lista_candidatos(cargo_id, uf, page)
+    candidatos = HTTParty.get("http://api.transparencia.org.br/sandbox/v1/candidatos?estado=#{uf}&cargo=#{cargo_id}&_limit=10&_offset=#{page}", :headers => { "App-Token" => ENV['TRANSPARENCIA_TOKEN'] } )
+    candidatos
+  end
+  
+  def random_candidato(cargo_id, uf, page)
+    candidatos = HTTParty.get("http://api.transparencia.org.br/sandbox/v1/candidatos?estado=#{uf}&cargo=#{cargo_id}&_limit=10&_offset=#{page}", :headers => { "App-Token" => ENV['TRANSPARENCIA_TOKEN'] } )
+    candidatos
   end
   
   def lista_cargos(uf)
@@ -28,6 +36,14 @@ module HomeHelper
       end  
     end
     retorno
+  end
+  
+  def link_edit(id)
+    "#{request.protocol}#{request.host_with_port}/edit/#{id}"
+  end
+  
+  def link_view(id)
+    "#{request.protocol}#{request.host_with_port}/v/#{id}"
   end
   
 end

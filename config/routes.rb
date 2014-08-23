@@ -3,8 +3,14 @@ ColaeleitoralWeb::Application.routes.draw do
   root :to => "home#index"
   
   get 'index', to: 'home#index'
+  get 'estados', to: 'home#estados', as: 'estados'
   get 'cola/:uf', to: 'home#cola', as: 'cola'
-  get 'cola/:uf/:device_id', to: 'home#cola', as: 'cola2'
+  get 'cola/:uf/:device_id', to: 'home#cola', as: 'cola_mobile'
+  get 'edit/:id', to: 'home#edit', as: 'edit'
+  get 'v/:id', to: 'home#view', as: 'view'
+  get 'candidatos/:uf/:cargo_id', to: 'home#candidatos', as: 'candidatos'
+  get 'roleta/:cola_id/:cargo', to: 'home#roleta', as: 'roleta'
+  get 'avalia/:candidato_id/:cola_id/:cargo_id/:uf/:avaliacao', to: 'home#avalia', as: 'avalia'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

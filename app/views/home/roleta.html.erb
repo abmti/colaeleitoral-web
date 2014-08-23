@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row">
+  	<div class="col-md-6">
+    
+      <div class="panel panel-default">
+			<div class="panel-body">
+              		<div class="row">
+              			<div class="col-xs-12 col-sm-4 text-center">
+                                <img src="<%= @candidato["foto"] %>" alt="" class="center-block img-circle img-responsive">
+                        </div><!--/col-->
+                        <div class="col-xs-12 col-sm-8">
+                            <h2><%= @candidato["apelido"] %> (<%= @candidato["numero"] %>)</h2>
+                            <p><strong><%= @candidato["cargo"] %> - </strong> <%= @candidato["estado"] %> </p>
+                            <p><strong><%= @candidato["partido"] %></strong></p>
+                            <p><a href="" data-toggle="modal" data-target="#myModal">+ Info</a></p>
+                            
+                        </div><!--/col-->          
+                        
+
+                        <div class="col-xs-12 col-sm-4">
+                        	<%= link_to "Neim Fudenu", "/avalia/#{@candidato['id']}/#{@cola.id}/#{@cargo_id}/#{@cola.uf}/n", class: "btn btn-primary btn-block"  %>
+                        </div><!--/col-->
+                        <div class="col-xs-12 col-sm-4">
+                        
+                        </div><!--/col-->
+                        <div class="col-xs-12 col-sm-4">
+                        	<%= link_to "Pode Ser", "/avalia/#{@candidato['id']}/#{@cola.id}/#{@cargo_id}/#{@cola.uf}/y", class: "btn btn-success btn-block"  %>
+                        </div><!--/col-->
+              		</div><!--/row-->
+              </div><!--/panel-body-->
+          </div><!--/panel-->
+          <div class="row">
+          	<div class="col-xs-12 col-sm-12">
+				<%= link_to "Voltar para minha cola", "/edit/#{@cola.id}", class: "btn btn-default btn-block"  %>
+			</div>
+		</div>
+    </div>
+  </div>
+</div>
+
+<%= render 'popup_candidato', candidato: @candidato %>

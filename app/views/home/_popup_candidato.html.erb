@@ -1,0 +1,23 @@
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel"><%= candidato["apelido"] %> (<%= candidato["numero"] %>)</h4>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nome</strong> <%= candidato["nome"] %> </p>
+        <p><strong>Cargo pretendido</strong> <%= candidato["cargo"] %> - <%= candidato["estado"] %></p>
+        <p><strong>Partido</strong> <%= candidato["partido"] %></p>
+        <p><strong>Ocupação</strong> <%= candidato["ocupacao"] %></p>
+        <p><strong>Pretensão de gastos</strong> <%= candidato["previsao"] %></p>
+        <p><strong>Biografia</strong> <%= candidato["miniBio"] %></p>
+        <p><strong>Cargos</strong> <%= candidato["cargos"] %></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>

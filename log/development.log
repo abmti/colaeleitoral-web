@@ -249,3 +249,1750 @@ ActionController::RoutingError (No route matches [GET] "/cola/AC"):
   Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
   Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
   Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (16.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-23 10:14:32 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (964.7ms)
+Completed 200 OK in 1060ms (Views: 1044.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-23 10:14:33 -0300
+
+
+Started GET "/assets/coladas.css?body=1" for 127.0.0.1 at 2014-08-23 10:14:33 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-08-23 10:14:33 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-23 10:14:33 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-23 10:14:33 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-23 10:14:33 -0300
+
+
+Started GET "/assets/coladas.js?body=1" for 127.0.0.1 at 2014-08-23 10:14:33 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-08-23 10:14:33 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-23 10:14:33 -0300
+
+
+Started GET "/cola/DF/" for 127.0.0.1 at 2014-08-23 10:14:43 -0300
+Processing by HomeController#cola as HTML
+  Parameters: {"uf"=>"DF"}
+Completed 500 Internal Server Error in 505ms
+
+NameError (uninitialized constant HomeController::Colada):
+  app/controllers/home_controller.rb:21:in `cola'
+
+
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.8ms)
+
+
+Started GET "/cola/DF/" for 127.0.0.1 at 2014-08-23 10:14:44 -0300
+Processing by HomeController#cola as HTML
+  Parameters: {"uf"=>"DF"}
+Completed 500 Internal Server Error in 495ms
+
+NameError (uninitialized constant HomeController::Colada):
+  app/controllers/home_controller.rb:21:in `cola'
+
+
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.1ms)
+
+
+Started GET "/cola/DF/" for 127.0.0.1 at 2014-08-23 10:15:15 -0300
+Processing by HomeController#cola as HTML
+  Parameters: {"uf"=>"DF"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 1.1280ms
+  MOPED: 127.0.0.1:27017 INSERT       database=colaeleitoral collection=colas documents=[{"_id"=>BSON::ObjectId('53f893e34d61631247000000'), "device_id"=>nil, "uf"=>"DF"}] flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 1.8510ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f893e34d61631247000000')} update={"$push"=>{"cola_cargo"=>{"_id"=>BSON::ObjectId('53f893e34d61631247010000'), "id_cargo"=>"1", "nome_cargo"=>"Presidente", "candidatos"=>[]}}} flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.8100ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f893e34d61631247000000')} update={"$push"=>{"cola_cargo"=>{"_id"=>BSON::ObjectId('53f893e34d61631247020000'), "id_cargo"=>"3", "nome_cargo"=>"Governador", "candidatos"=>[]}}} flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 1.1440ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f893e34d61631247000000')} update={"$push"=>{"cola_cargo"=>{"_id"=>BSON::ObjectId('53f893e34d61631247030000'), "id_cargo"=>"5", "nome_cargo"=>"Senador", "candidatos"=>[]}}} flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.7760ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f893e34d61631247000000')} update={"$push"=>{"cola_cargo"=>{"_id"=>BSON::ObjectId('53f893e34d61631247040000'), "id_cargo"=>"6", "nome_cargo"=>"Deputado Federal", "candidatos"=>[]}}} flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.7800ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f893e34d61631247000000')} update={"$push"=>{"cola_cargo"=>{"_id"=>BSON::ObjectId('53f893e34d61631247050000'), "id_cargo"=>"8", "nome_cargo"=>"Deputado Distrital", "candidatos"=>[]}}} flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.9550ms
+Completed 500 Internal Server Error in 543ms
+
+NoMethodError (undefined method `edit_path' for #<HomeController:0x007f8f371732e8>):
+  app/controllers/home_controller.rb:33:in `block (2 levels) in cola'
+  app/controllers/home_controller.rb:31:in `cola'
+
+
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.0ms)
+
+
+Started GET "/cola/DF/" for 127.0.0.1 at 2014-08-23 10:16:12 -0300
+Processing by HomeController#cola as HTML
+  Parameters: {"uf"=>"DF"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6590ms
+  MOPED: 127.0.0.1:27017 INSERT       database=colaeleitoral collection=colas documents=[{"_id"=>BSON::ObjectId('53f8941d4d61631247060000'), "device_id"=>nil, "uf"=>"DF"}] flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.5710ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f8941d4d61631247060000')} update={"$push"=>{"cola_cargo"=>{"_id"=>BSON::ObjectId('53f8941d4d61631247070000'), "id_cargo"=>"1", "nome_cargo"=>"Presidente", "candidatos"=>[]}}} flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.6660ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f8941d4d61631247060000')} update={"$push"=>{"cola_cargo"=>{"_id"=>BSON::ObjectId('53f8941d4d61631247080000'), "id_cargo"=>"3", "nome_cargo"=>"Governador", "candidatos"=>[]}}} flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.6070ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f8941d4d61631247060000')} update={"$push"=>{"cola_cargo"=>{"_id"=>BSON::ObjectId('53f8941d4d61631247090000'), "id_cargo"=>"5", "nome_cargo"=>"Senador", "candidatos"=>[]}}} flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.6020ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f8941d4d61631247060000')} update={"$push"=>{"cola_cargo"=>{"_id"=>BSON::ObjectId('53f8941d4d616312470a0000'), "id_cargo"=>"6", "nome_cargo"=>"Deputado Federal", "candidatos"=>[]}}} flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.5710ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f8941d4d61631247060000')} update={"$push"=>{"cola_cargo"=>{"_id"=>BSON::ObjectId('53f8941d4d616312470b0000'), "id_cargo"=>"8", "nome_cargo"=>"Deputado Distrital", "candidatos"=>[]}}} flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.5970ms
+Completed 500 Internal Server Error in 534ms
+
+NoMethodError (undefined method `edit_path' for #<HomeController:0x007f8f31e702d0>):
+  app/controllers/home_controller.rb:33:in `block (2 levels) in cola'
+  app/controllers/home_controller.rb:31:in `cola'
+
+
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.5ms)
+
+
+Started GET "/cola/DF/" for 127.0.0.1 at 2014-08-23 10:16:33 -0300
+Processing by HomeController#cola as HTML
+  Parameters: {"uf"=>"DF"}
+  MOPED: 127.0.0.1:27017 INSERT       database=colaeleitoral collection=colas documents=[{"_id"=>BSON::ObjectId('53f894324d616312470c0000'), "device_id"=>nil, "uf"=>"DF"}] flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.8330ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f894324d616312470c0000')} update={"$push"=>{"cola_cargo"=>{"_id"=>BSON::ObjectId('53f894324d616312470d0000'), "id_cargo"=>"1", "nome_cargo"=>"Presidente", "candidatos"=>[]}}} flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.6980ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f894324d616312470c0000')} update={"$push"=>{"cola_cargo"=>{"_id"=>BSON::ObjectId('53f894324d616312470e0000'), "id_cargo"=>"3", "nome_cargo"=>"Governador", "candidatos"=>[]}}} flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.6420ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f894324d616312470c0000')} update={"$push"=>{"cola_cargo"=>{"_id"=>BSON::ObjectId('53f894324d616312470f0000'), "id_cargo"=>"5", "nome_cargo"=>"Senador", "candidatos"=>[]}}} flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.6200ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f894324d616312470c0000')} update={"$push"=>{"cola_cargo"=>{"_id"=>BSON::ObjectId('53f894324d61631247100000'), "id_cargo"=>"6", "nome_cargo"=>"Deputado Federal", "candidatos"=>[]}}} flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.6200ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f894324d616312470c0000')} update={"$push"=>{"cola_cargo"=>{"_id"=>BSON::ObjectId('53f894324d61631247110000'), "id_cargo"=>"8", "nome_cargo"=>"Deputado Distrital", "candidatos"=>[]}}} flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.6950ms
+Redirected to http://localhost:3000/edit/53f894324d616312470c0000
+Completed 302 Found in 505ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/edit/53f894324d616312470c0000" for 127.0.0.1 at 2014-08-23 10:16:34 -0300
+Processing by HomeController#edit as HTML
+  Parameters: {"id"=>"53f894324d616312470c0000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f894324d616312470c0000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.8050ms
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `detalhes_candidatos=' for #<ColaCargo:0x007f8f31b242c0>):
+  app/controllers/home_controller.rb:42:in `block in edit'
+  app/controllers/home_controller.rb:41:in `edit'
+
+
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.5ms)
+
+
+Started GET "/edit/53f894324d616312470c0000" for 127.0.0.1 at 2014-08-23 10:18:20 -0300
+Processing by HomeController#edit as HTML
+  Parameters: {"id"=>"53f894324d616312470c0000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6760ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f894324d616312470c0000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.7040ms
+  Rendered home/edit.html.erb within layouts/application (7.4ms)
+Completed 500 Internal Server Error in 29ms
+
+ActionView::Template::Error (undefined method `link_edit' for #<#<Class:0x007f8f37200be8>:0x007f8f37201610>):
+     8: 
+     9: 				<h1>Cola de votação</h1>
+    10: 				<p>
+    11: 					URL de edição: <%= link_edit(@cola.id) %>
+    12: 					<br />
+    13: 					URL de visualização: <%= link_view(@cola.id) %>
+    14: 				</p>
+  app/views/home/edit.html.erb:11:in `_app_views_home_edit_html_erb___4156766013062759985_70126540970060'
+
+
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (36.5ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (54.4ms)
+
+
+Started GET "/edit/53f894324d616312470c0000" for 127.0.0.1 at 2014-08-23 10:18:42 -0300
+Processing by HomeController#edit as HTML
+  Parameters: {"id"=>"53f894324d616312470c0000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f894324d616312470c0000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.8640ms
+  Rendered home/edit.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 26ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/coladas.css?body=1" for 127.0.0.1 at 2014-08-23 10:18:42 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-23 10:18:42 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-23 10:18:42 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-08-23 10:18:42 -0300
+
+
+Started GET "/assets/coladas.js?body=1" for 127.0.0.1 at 2014-08-23 10:18:42 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-23 10:18:42 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-23 10:18:42 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-08-23 10:18:42 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-23 10:18:42 -0300
+
+
+Started GET "/roleta/53f894324d616312470c0000/1" for 127.0.0.1 at 2014-08-23 10:19:10 -0300
+
+ActionController::RoutingError (No route matches [GET] "/roleta/53f894324d616312470c0000/1"):
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/popolin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/popolin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/popolin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.3ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (30.4ms)
+
+
+Started GET "/roleta/53f894324d616312470c0000/1" for 127.0.0.1 at 2014-08-23 10:19:10 -0300
+
+ActionController::RoutingError (No route matches [GET] "/roleta/53f894324d616312470c0000/1"):
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/popolin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/popolin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/popolin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.4ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (25.4ms)
+
+
+Started GET "/roleta/53f894324d616312470c0000/1" for 127.0.0.1 at 2014-08-23 10:19:42 -0300
+
+AbstractController::ActionNotFound (The action 'roleta' could not be found for HomeController):
+  actionpack (4.1.4) lib/abstract_controller/base.rb:131:in `process'
+  actionview (4.1.4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.4) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.4) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.4) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/popolin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/popolin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/popolin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.9ms)
+
+
+Started GET "/roleta/53f894324d616312470c0000/1" for 127.0.0.1 at 2014-08-23 10:19:42 -0300
+
+AbstractController::ActionNotFound (The action 'roleta' could not be found for HomeController):
+  actionpack (4.1.4) lib/abstract_controller/base.rb:131:in `process'
+  actionview (4.1.4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.4) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.4) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.4) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/popolin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/popolin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/popolin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.6ms)
+
+
+Started GET "/roleta/53f894324d616312470c0000/1" for 127.0.0.1 at 2014-08-23 10:25:52 -0300
+Processing by HomeController#roleta as HTML
+  Parameters: {"cola_id"=>"53f894324d616312470c0000", "cargo"=>"1"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.7060ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f894324d616312470c0000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.6860ms
+Completed 500 Internal Server Error in 13ms
+
+LoadError (Unable to autoload constant Total, expected /Users/popolin/workspace/colaeleitoral-web/app/models/total.rb to define it):
+  app/controllers/home_controller.rb:42:in `roleta'
+
+
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.1ms)
+
+
+Started GET "/roleta/53f894324d616312470c0000/1" for 127.0.0.1 at 2014-08-23 10:25:53 -0300
+Processing by HomeController#roleta as HTML
+  Parameters: {"cola_id"=>"53f894324d616312470c0000", "cargo"=>"1"}
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f894324d616312470c0000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.1690ms
+Completed 500 Internal Server Error in 5ms
+
+RuntimeError (Circular dependency detected while autoloading constant Total):
+  app/controllers/home_controller.rb:42:in `roleta'
+
+
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-23 10:26:31 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (512.6ms)
+Completed 200 OK in 566ms (Views: 564.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-08-23 10:26:32 -0300
+
+
+Started GET "/assets/coladas.css?body=1" for 127.0.0.1 at 2014-08-23 10:26:32 -0300
+
+
+Started GET "/assets/coladas.js?body=1" for 127.0.0.1 at 2014-08-23 10:26:32 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-23 10:26:32 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-23 10:26:32 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-23 10:26:32 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-08-23 10:26:32 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-23 10:26:32 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-23 10:26:32 -0300
+
+
+Started GET "/candidatos/DF/1.json" for 127.0.0.1 at 2014-08-23 10:26:40 -0300
+
+AbstractController::ActionNotFound (The action 'candidatos' could not be found for HomeController):
+  actionpack (4.1.4) lib/abstract_controller/base.rb:131:in `process'
+  actionview (4.1.4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.4) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.4) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.4) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/popolin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/popolin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/popolin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.6ms)
+
+
+Started GET "/candidatos/DF/1.json" for 127.0.0.1 at 2014-08-23 10:27:27 -0300
+Processing by HomeController#candidatos as JSON
+  Parameters: {"uf"=>"DF", "cargo_id"=>"1"}
+Completed 500 Internal Server Error in 2ms
+
+LoadError (Unable to autoload constant Total, expected /Users/popolin/workspace/colaeleitoral-web/app/models/total.rb to define it):
+  app/controllers/home_controller.rb:41:in `block in candidatos'
+  app/controllers/home_controller.rb:40:in `candidatos'
+
+
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.5ms)
+
+
+Started GET "/candidatos/DF/1.json" for 127.0.0.1 at 2014-08-23 10:28:20 -0300
+Processing by HomeController#candidatos as JSON
+  Parameters: {"uf"=>"DF", "cargo_id"=>"1"}
+Completed 500 Internal Server Error in 1ms
+
+RuntimeError (Circular dependency detected while autoloading constant Total):
+  app/controllers/home_controller.rb:41:in `block in candidatos'
+  app/controllers/home_controller.rb:40:in `candidatos'
+
+
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.8ms)
+
+
+Started GET "/candidatos/DF/1.json" for 127.0.0.1 at 2014-08-23 10:28:36 -0300
+Processing by HomeController#candidatos as JSON
+  Parameters: {"uf"=>"DF", "cargo_id"=>"1"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.7460ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=totals selector={"$query"=>{"uf"=>"DF", "cargo"=>"1"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.8780ms
+  MOPED: 127.0.0.1:27017 INSERT       database=colaeleitoral collection=totals documents=[{"_id"=>BSON::ObjectId('53f897054d61631247120000'), "quantidade"=>11, "uf"=>"DF", "cargo"=>"1"}] flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 1.9920ms
+Completed 200 OK in 2571ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/candidatos/DF/3.json" for 127.0.0.1 at 2014-08-23 10:32:33 -0300
+Processing by HomeController#candidatos as JSON
+  Parameters: {"uf"=>"DF", "cargo_id"=>"3"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.5440ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=totals selector={"$query"=>{"uf"=>"DF", "cargo"=>"3"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6530ms
+  MOPED: 127.0.0.1:27017 INSERT       database=colaeleitoral collection=totals documents=[{"_id"=>BSON::ObjectId('53f897f34d61631247130000'), "quantidade"=>6, "uf"=>"DF", "cargo"=>"3"}] flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.9670ms
+Completed 200 OK in 2977ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/candidatos/DF/5.json" for 127.0.0.1 at 2014-08-23 10:32:40 -0300
+Processing by HomeController#candidatos as JSON
+  Parameters: {"uf"=>"DF", "cargo_id"=>"5"}
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=totals selector={"$query"=>{"uf"=>"DF", "cargo"=>"5"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.7770ms
+  MOPED: 127.0.0.1:27017 INSERT       database=colaeleitoral collection=totals documents=[{"_id"=>BSON::ObjectId('53f897f84d61631247140000'), "quantidade"=>8, "uf"=>"DF", "cargo"=>"5"}] flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.9660ms
+Completed 200 OK in 1860ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/candidatos/DF/3.json" for 127.0.0.1 at 2014-08-23 10:36:28 -0300
+Processing by HomeController#candidatos as JSON
+  Parameters: {"uf"=>"DF", "cargo_id"=>"3"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.9500ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=totals selector={"$query"=>{"uf"=>"DF", "cargo"=>"3"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.7250ms
+Completed 200 OK in 1059ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/candidatos/DF/6.json" for 127.0.0.1 at 2014-08-23 10:36:52 -0300
+Processing by HomeController#candidatos as JSON
+  Parameters: {"uf"=>"DF", "cargo_id"=>"6"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 1.5590ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=totals selector={"$query"=>{"uf"=>"DF", "cargo"=>"6"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6080ms
+  MOPED: 127.0.0.1:27017 INSERT       database=colaeleitoral collection=totals documents=[{"_id"=>BSON::ObjectId('53f8999f4d61631658000000'), "quantidade"=>2239, "uf"=>"DF", "cargo"=>"6"}] flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 1.0350ms
+Completed 200 OK in 171049ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/candidatos/DF/8.json" for 127.0.0.1 at 2014-08-23 10:44:02 -0300
+Processing by HomeController#candidatos as JSON
+  Parameters: {"uf"=>"DF", "cargo_id"=>"8"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6510ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=totals selector={"$query"=>{"uf"=>"DF", "cargo"=>"8"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5410ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.7920ms
+  MOPED: 127.0.0.1:27017 INSERT       database=colaeleitoral collection=totals documents=[{"_id"=>BSON::ObjectId('53f8a0a34d61631658010000'), "quantidade"=>19759, "uf"=>"DF", "cargo"=>"8"}] flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.7070ms
+Completed 200 OK in 1536950ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/candidatos/DF/8.json" for 127.0.0.1 at 2014-08-23 11:10:39 -0300
+Processing by HomeController#candidatos as JSON
+  Parameters: {"uf"=>"DF", "cargo_id"=>"8"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6930ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=totals selector={"$query"=>{"uf"=>"DF", "cargo"=>"8"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6130ms
+Completed 200 OK in 526ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/candidatos/DF/8.json" for 127.0.0.1 at 2014-08-23 11:11:29 -0300
+Processing by HomeController#candidatos as JSON
+  Parameters: {"uf"=>"DF", "cargo_id"=>"8"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6570ms
+  MOPED: 127.0.0.1:27017 INSERT       database=colaeleitoral collection=estados documents=[{"_id"=>BSON::ObjectId('53f8a1124d61631658020000'), "estadoId"=>"1", "sigla"=>"AC", "bandeira"=>"http://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Bandeira_do_Acre.svg/90px-Bandeira_do_Acre.svg.png", "nome"=>"Acre"}] flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 1.6550ms
+  MOPED: 127.0.0.1:27017 INSERT       database=colaeleitoral collection=estados documents=[{"_id"=>BSON::ObjectId('53f8a1124d61631658030000'), "estadoId"=>"2", "sigla"=>"AL", "bandeira"=>"http://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Bandeira_de_Alagoas.svg/90px-Bandeira_de_Alagoas.svg.png", "nome"=>"Alagoas"}] flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.5930ms
+  MOPED: 127.0.0.1:27017 INSERT       database=colaeleitoral collection=estados documents=[{"_id"=>BSON::ObjectId('53f8a1124d61631658040000'), "estadoId"=>"3", "sigla"=>"AM", "bandeira"=>"http://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Bandeira_do_Amazonas.svg/90px-Bandeira_do_Amazonas.svg.png", "nome"=>"Amazonas"}] flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.5260ms
+  MOPED: 127.0.0.1:27017 INSERT       database=colaeleitoral collection=estados documents=[{"_id"=>BSON::ObjectId('53f8a1124d61631658050000'), "estadoId"=>"4", "sigla"=>"AP", "bandeira"=>"http://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Bandeira_do_Amap%C3%A1.svg/90px-Bandeira_do_Amap%C3%A1.svg.png", "nome"=>"Amapá"}] flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.5200ms
+  MOPED: 127.0.0.1:27017 INSERT       database=colaeleitoral collection=estados documents=[{"_id"=>BSON::ObjectId('53f8a1124d61631658060000'), "estadoId"=>"5", "sigla"=>"BA", "bandeira"=>"http://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Bandeira_da_Bahia.svg/90px-Bandeira_da_Bahia.svg.png", "nome"=>"Bahia"}] flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.5980ms
+  MOPED: 127.0.0.1:27017 INSERT       database=colaeleitoral collection=estados documents=[{"_id"=>BSON::ObjectId('53f8a1124d61631658070000'), "estadoId"=>"6", "sigla"=>"CE", "bandeira"=>"http://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Bandeira_do_Cear%C3%A1.svg/90px-Bandeira_do_Cear%C3%A1.svg.png", "nome"=>"Ceará"}] flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.5290ms
+  MOPED: 127.0.0.1:27017 INSERT       database=colaeleitoral collection=estados documents=[{"_id"=>BSON::ObjectId('53f8a1124d61631658080000'), "estadoId"=>"27", "sigla"=>"DF", "bandeira"=>"http://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Bandeira_do_Distrito_Federal_%28Brasil%29.svg/90px-Bandeira_do_Distrito_Federal_%28Brasil%29.svg.png", "nome"=>"Distrito Federal"}] flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.5920ms
+  MOPED: 127.0.0.1:27017 INSERT       database=colaeleitoral collection=estados documents=[{"_id"=>BSON::ObjectId('53f8a1124d61631658090000'), "estadoId"=>"7", "sigla"=>"ES", "bandeira"=>"http://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Bandeira_do_Esp%C3%ADrito_Santo.svg/90px-Bandeira_do_Esp%C3%ADrito_Santo.svg.png", "nome"=>"Espírito Santo"}] flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.5650ms
+  MOPED: 127.0.0.1:27017 INSERT       database=colaeleitoral collection=estados documents=[{"_id"=>BSON::ObjectId('53f8a1124d616316580a0000'), "estadoId"=>"8", "sigla"=>"GO", "bandeira"=>"http://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Bandeira_de_Goi%C3%A1s.svg/90px-Bandeira_de_Goi%C3%A1s.svg.png", "nome"=>"Goiás"}] flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.5150ms
+  MOPED: 127.0.0.1:27017 INSERT       database=colaeleitoral collection=estados documents=[{"_id"=>BSON::ObjectId('53f8a1124d616316580b0000'), "estadoId"=>"10", "sigla"=>"MG", "bandeira"=>"http://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Bandeira_de_Minas_Gerais.svg/90px-Bandeira_de_Minas_Gerais.svg.png", "nome"=>"Minas Gerais"}] flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.5290ms
+  MOPED: 127.0.0.1:27017 INSERT       database=colaeleitoral collection=estados documents=[{"_id"=>BSON::ObjectId('53f8a1124d616316580c0000'), "estadoId"=>"11", "sigla"=>"MS", "bandeira"=>"http://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Bandeira_de_Mato_Grosso_do_Sul.svg/90px-Bandeira_de_Mato_Grosso_do_Sul.svg.png", "nome"=>"Mato Grosso do Sul"}] flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.5490ms
+  MOPED: 127.0.0.1:27017 INSERT       database=colaeleitoral collection=estados documents=[{"_id"=>BSON::ObjectId('53f8a1124d616316580d0000'), "estadoId"=>"12", "sigla"=>"MT", "bandeira"=>"http://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Bandeira_de_Mato_Grosso.svg/90px-Bandeira_de_Mato_Grosso.svg.png", "nome"=>"Mato Grosso"}] flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.5570ms
+  MOPED: 127.0.0.1:27017 INSERT       database=colaeleitoral collection=estados documents=[{"_id"=>BSON::ObjectId('53f8a1124d616316580e0000'), "estadoId"=>"13", "sigla"=>"PA", "bandeira"=>"http://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Bandeira_do_Paran%C3%A1.svg/90px-Bandeira_do_Paran%C3%A1.svg.png", "nome"=>"Pará"}] flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.5230ms
+  MOPED: 127.0.0.1:27017 INSERT       database=colaeleitoral collection=estados documents=[{"_id"=>BSON::ObjectId('53f8a1124d616316580f0000'), "estadoId"=>"14", "sigla"=>"PB", "bandeira"=>"http://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Bandeira_da_Para%C3%ADba.svg/90px-Bandeira_da_Para%C3%ADba.svg.png", "nome"=>"Paraíba"}] flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.5270ms
+  MOPED: 127.0.0.1:27017 INSERT       database=colaeleitoral collection=estados documents=[{"_id"=>BSON::ObjectId('53f8a1124d61631658100000'), "estadoId"=>"15", "sigla"=>"PE", "bandeira"=>"http://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Bandeira_de_Pernambuco.svg/90px-Bandeira_de_Pernambuco.svg.png", "nome"=>"Pernambuco"}] flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.5630ms
+  MOPED: 127.0.0.1:27017 INSERT       database=colaeleitoral collection=estados documents=[{"_id"=>BSON::ObjectId('53f8a1124d61631658110000'), "estadoId"=>"16", "sigla"=>"PI", "bandeira"=>"http://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Bandeira_do_Piau%C3%AD.svg/90px-Bandeira_do_Piau%C3%AD.svg.png", "nome"=>"Piauí"}] flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 6.9450ms
+  MOPED: 127.0.0.1:27017 INSERT       database=colaeleitoral collection=estados documents=[{"_id"=>BSON::ObjectId('53f8a1124d61631658120000'), "estadoId"=>"17", "sigla"=>"PR", "bandeira"=>"http://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Bandeira_do_Paran%C3%A1.svg/90px-Bandeira_do_Paran%C3%A1.svg.png", "nome"=>"Paraná"}] flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.6630ms
+  MOPED: 127.0.0.1:27017 INSERT       database=colaeleitoral collection=estados documents=[{"_id"=>BSON::ObjectId('53f8a1124d61631658130000'), "estadoId"=>"18", "sigla"=>"RJ", "bandeira"=>"http://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Bandeira_do_estado_do_Rio_de_Janeiro.svg/90px-Bandeira_do_estado_do_Rio_de_Janeiro.svg.png", "nome"=>"Rio de Janeiro"}] flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.5530ms
+  MOPED: 127.0.0.1:27017 INSERT       database=colaeleitoral collection=estados documents=[{"_id"=>BSON::ObjectId('53f8a1124d61631658140000'), "estadoId"=>"20", "sigla"=>"RO", "bandeira"=>"http://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Bandeira_de_Rond%C3%B4nia.svg/90px-Bandeira_de_Rond%C3%B4nia.svg.png", "nome"=>"Rondônia"}] flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.5370ms
+  MOPED: 127.0.0.1:27017 INSERT       database=colaeleitoral collection=estados documents=[{"_id"=>BSON::ObjectId('53f8a1124d61631658150000'), "estadoId"=>"21", "sigla"=>"RR", "bandeira"=>"http://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Bandeira_de_Roraima.svg/90px-Bandeira_de_Roraima.svg.png", "nome"=>"Roraima"}] flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.5260ms
+  MOPED: 127.0.0.1:27017 INSERT       database=colaeleitoral collection=estados documents=[{"_id"=>BSON::ObjectId('53f8a1124d61631658160000'), "estadoId"=>"22", "sigla"=>"RS", "bandeira"=>"http://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Bandeira_do_Rio_Grande_do_Sul.svg/90px-Bandeira_do_Rio_Grande_do_Sul.svg.png", "nome"=>"Rio Grande do Sul"}] flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.5440ms
+  MOPED: 127.0.0.1:27017 INSERT       database=colaeleitoral collection=estados documents=[{"_id"=>BSON::ObjectId('53f8a1124d61631658170000'), "estadoId"=>"23", "sigla"=>"SC", "bandeira"=>"http://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Bandeira_de_Santa_Catarina.svg/90px-Bandeira_de_Santa_Catarina.svg.png", "nome"=>"Santa Catarina"}] flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.5930ms
+  MOPED: 127.0.0.1:27017 INSERT       database=colaeleitoral collection=estados documents=[{"_id"=>BSON::ObjectId('53f8a1124d61631658180000'), "estadoId"=>"24", "sigla"=>"SE", "bandeira"=>"http://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Bandeira_de_Sergipe.svg/90px-Bandeira_de_Sergipe.svg.png", "nome"=>"Sergipe"}] flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.5840ms
+  MOPED: 127.0.0.1:27017 INSERT       database=colaeleitoral collection=estados documents=[{"_id"=>BSON::ObjectId('53f8a1124d61631658190000'), "estadoId"=>"25", "sigla"=>"SP", "bandeira"=>"http://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Bandeira_do_estado_de_S%C3%A3o_Paulo.svg/90px-Bandeira_do_estado_de_S%C3%A3o_Paulo.svg.png", "nome"=>"São Paulo"}] flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.5400ms
+  MOPED: 127.0.0.1:27017 INSERT       database=colaeleitoral collection=estados documents=[{"_id"=>BSON::ObjectId('53f8a1124d616316581a0000'), "estadoId"=>"26", "sigla"=>"TO", "bandeira"=>"http://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Bandeira_do_Tocantins.svg/90px-Bandeira_do_Tocantins.svg.png", "nome"=>"Tocantins"}] flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.5130ms
+Completed 500 Internal Server Error in 248ms
+
+NoMethodError (undefined method `quantidade' for 12:Fixnum):
+  app/controllers/home_controller.rb:41:in `block in candidatos'
+  app/controllers/home_controller.rb:40:in `candidatos'
+
+
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-23 11:12:45 -0300
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.7540ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=estados selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.6940ms
+  Rendered home/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 97ms (Views: 95.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-23 11:12:45 -0300
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6000ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=estados selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.6590ms
+  Rendered home/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/coladas.css?body=1" for 127.0.0.1 at 2014-08-23 11:12:45 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-08-23 11:12:45 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-23 11:12:45 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-23 11:12:45 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-23 11:12:45 -0300
+
+
+Started GET "/assets/coladas.js?body=1" for 127.0.0.1 at 2014-08-23 11:12:45 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-23 11:12:45 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-08-23 11:12:45 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-23 11:12:45 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-23 11:13:46 -0300
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6490ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=estados selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.6820ms
+  Rendered home/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/coladas.css?body=1" for 127.0.0.1 at 2014-08-23 11:13:46 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-23 11:13:46 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-08-23 11:13:46 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-23 11:13:46 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-23 11:13:46 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-23 11:13:46 -0300
+
+
+Started GET "/assets/coladas.js?body=1" for 127.0.0.1 at 2014-08-23 11:13:46 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-23 11:13:46 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-08-23 11:13:46 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-23 11:13:51 -0300
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.7260ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=estados selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.7190ms
+  Rendered home/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/coladas.css?body=1" for 127.0.0.1 at 2014-08-23 11:13:51 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-23 11:13:51 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-23 11:13:51 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-23 11:13:51 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-23 11:13:51 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-08-23 11:13:51 -0300
+
+
+Started GET "/assets/coladas.js?body=1" for 127.0.0.1 at 2014-08-23 11:13:51 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-08-23 11:13:51 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-23 11:13:51 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-23 11:14:03 -0300
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6540ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=estados selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.7430ms
+  Rendered home/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/coladas.css?body=1" for 127.0.0.1 at 2014-08-23 11:14:03 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-23 11:14:03 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-23 11:14:03 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-23 11:14:03 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-23 11:14:03 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-08-23 11:14:03 -0300
+
+
+Started GET "/assets/coladas.js?body=1" for 127.0.0.1 at 2014-08-23 11:14:03 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-08-23 11:14:03 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-23 11:14:03 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-23 11:14:05 -0300
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6640ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=estados selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.9960ms
+  Rendered home/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/coladas.css?body=1" for 127.0.0.1 at 2014-08-23 11:14:05 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-23 11:14:05 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-23 11:14:05 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-08-23 11:14:05 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-23 11:14:05 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-23 11:14:05 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-08-23 11:14:05 -0300
+
+
+Started GET "/assets/coladas.js?body=1" for 127.0.0.1 at 2014-08-23 11:14:05 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-23 11:14:05 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-23 11:14:10 -0300
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=estados selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 2.0650ms
+  Rendered home/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/coladas.css?body=1" for 127.0.0.1 at 2014-08-23 11:14:10 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-08-23 11:14:10 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-23 11:14:10 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-23 11:14:10 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-23 11:14:10 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-23 11:14:10 -0300
+
+
+Started GET "/assets/coladas.js?body=1" for 127.0.0.1 at 2014-08-23 11:14:10 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-08-23 11:14:10 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-23 11:14:10 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-23 11:14:51 -0300
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6420ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=estados selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.8400ms
+  Rendered home/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-08-23 11:14:51 -0300
+
+
+Started GET "/assets/coladas.css?body=1" for 127.0.0.1 at 2014-08-23 11:14:51 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-23 11:14:51 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-23 11:14:51 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-23 11:14:51 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-23 11:14:51 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-08-23 11:14:51 -0300
+
+
+Started GET "/assets/coladas.js?body=1" for 127.0.0.1 at 2014-08-23 11:14:51 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-23 11:14:51 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-23 11:15:05 -0300
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6630ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=estados selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 2.0770ms
+  Rendered home/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-08-23 11:15:05 -0300
+
+
+Started GET "/assets/coladas.css?body=1" for 127.0.0.1 at 2014-08-23 11:15:05 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-23 11:15:05 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-23 11:15:05 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-23 11:15:05 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-23 11:15:05 -0300
+
+
+Started GET "/assets/coladas.js?body=1" for 127.0.0.1 at 2014-08-23 11:15:05 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-08-23 11:15:05 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-23 11:15:05 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-23 11:15:16 -0300
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.8350ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=estados selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.9000ms
+  Rendered home/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-08-23 11:15:16 -0300
+
+
+Started GET "/assets/coladas.css?body=1" for 127.0.0.1 at 2014-08-23 11:15:16 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-23 11:15:16 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-23 11:15:16 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-23 11:15:16 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-23 11:15:16 -0300
+
+
+Started GET "/assets/coladas.js?body=1" for 127.0.0.1 at 2014-08-23 11:15:16 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-08-23 11:15:16 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-23 11:15:16 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-23 11:15:31 -0300
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.7510ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=estados selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.8320ms
+  Rendered home/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/coladas.css?body=1" for 127.0.0.1 at 2014-08-23 11:15:31 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-23 11:15:31 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-23 11:15:31 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-23 11:15:31 -0300
+
+
+Started GET "/assets/coladas.js?body=1" for 127.0.0.1 at 2014-08-23 11:15:31 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-08-23 11:15:31 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-08-23 11:15:31 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-23 11:15:31 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-23 11:15:31 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-23 11:15:59 -0300
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6480ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=estados selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.6860ms
+  Rendered home/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/coladas.css?body=1" for 127.0.0.1 at 2014-08-23 11:15:59 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-23 11:15:59 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-23 11:15:59 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-08-23 11:15:59 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-23 11:15:59 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-23 11:15:59 -0300
+
+
+Started GET "/assets/coladas.js?body=1" for 127.0.0.1 at 2014-08-23 11:15:59 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-08-23 11:15:59 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-23 11:15:59 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-23 11:16:41 -0300
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.8090ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=estados selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 2.0610ms
+  Rendered home/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/coladas.css?body=1" for 127.0.0.1 at 2014-08-23 11:16:41 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-23 11:16:41 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-08-23 11:16:41 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-23 11:16:41 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-23 11:16:41 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-23 11:16:41 -0300
+
+
+Started GET "/assets/coladas.js?body=1" for 127.0.0.1 at 2014-08-23 11:16:41 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-08-23 11:16:41 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-23 11:16:41 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-23 11:17:01 -0300
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.7760ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=estados selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 2.2010ms
+  Rendered home/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/coladas.css?body=1" for 127.0.0.1 at 2014-08-23 11:17:01 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-23 11:17:01 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-23 11:17:01 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-23 11:17:01 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-23 11:17:01 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-08-23 11:17:01 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-08-23 11:17:01 -0300
+
+
+Started GET "/assets/coladas.js?body=1" for 127.0.0.1 at 2014-08-23 11:17:01 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-23 11:17:01 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-23 11:17:43 -0300
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6120ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=estados selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.6720ms
+  Rendered home/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/coladas.css?body=1" for 127.0.0.1 at 2014-08-23 11:17:43 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-23 11:17:43 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-23 11:17:43 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-23 11:17:43 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-08-23 11:17:43 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-23 11:17:43 -0300
+
+
+Started GET "/assets/coladas.js?body=1" for 127.0.0.1 at 2014-08-23 11:17:43 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-08-23 11:17:43 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-23 11:17:43 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-23 11:18:08 -0300
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 1.0630ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=estados selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.9830ms
+  Rendered home/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/coladas.css?body=1" for 127.0.0.1 at 2014-08-23 11:18:08 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-23 11:18:08 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-23 11:18:08 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-23 11:18:08 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-23 11:18:08 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-08-23 11:18:08 -0300
+
+
+Started GET "/assets/coladas.js?body=1" for 127.0.0.1 at 2014-08-23 11:18:08 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-08-23 11:18:08 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-23 11:18:08 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-23 11:19:13 -0300
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6360ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=estados selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.9360ms
+  Rendered home/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-08-23 11:19:13 -0300
+
+
+Started GET "/assets/coladas.css?body=1" for 127.0.0.1 at 2014-08-23 11:19:13 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-23 11:19:13 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-23 11:19:13 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-23 11:19:13 -0300
+
+
+Started GET "/assets/coladas.js?body=1" for 127.0.0.1 at 2014-08-23 11:19:13 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-23 11:19:13 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-08-23 11:19:13 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-23 11:19:13 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-23 11:19:25 -0300
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6450ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=estados selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.7380ms
+  Rendered home/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-23 11:19:25 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-23 11:19:25 -0300
+
+
+Started GET "/assets/coladas.css?body=1" for 127.0.0.1 at 2014-08-23 11:19:25 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-23 11:19:25 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-08-23 11:19:25 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-23 11:19:25 -0300
+
+
+Started GET "/assets/coladas.js?body=1" for 127.0.0.1 at 2014-08-23 11:19:25 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-08-23 11:19:25 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-23 11:19:25 -0300
+
+
+Started GET "/cola/DF/" for 127.0.0.1 at 2014-08-23 11:19:53 -0300
+Processing by HomeController#cola as HTML
+  Parameters: {"uf"=>"DF"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6330ms
+  MOPED: 127.0.0.1:27017 INSERT       database=colaeleitoral collection=colas documents=[{"_id"=>BSON::ObjectId('53f8a3094d616316581b0000'), "device_id"=>nil, "uf"=>"DF"}] flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.6870ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f8a3094d616316581b0000')} update={"$push"=>{"cola_cargo"=>{"_id"=>BSON::ObjectId('53f8a3094d616316581c0000'), "id_cargo"=>"1", "nome_cargo"=>"Presidente", "candidatos"=>[]}}} flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.8830ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f8a3094d616316581b0000')} update={"$push"=>{"cola_cargo"=>{"_id"=>BSON::ObjectId('53f8a3094d616316581d0000'), "id_cargo"=>"3", "nome_cargo"=>"Governador", "candidatos"=>[]}}} flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.7660ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f8a3094d616316581b0000')} update={"$push"=>{"cola_cargo"=>{"_id"=>BSON::ObjectId('53f8a3094d616316581e0000'), "id_cargo"=>"5", "nome_cargo"=>"Senador", "candidatos"=>[]}}} flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.6010ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f8a3094d616316581b0000')} update={"$push"=>{"cola_cargo"=>{"_id"=>BSON::ObjectId('53f8a3094d616316581f0000'), "id_cargo"=>"6", "nome_cargo"=>"Deputado Federal", "candidatos"=>[]}}} flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.6280ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f8a3094d616316581b0000')} update={"$push"=>{"cola_cargo"=>{"_id"=>BSON::ObjectId('53f8a3094d61631658200000'), "id_cargo"=>"8", "nome_cargo"=>"Deputado Distrital", "candidatos"=>[]}}} flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.6450ms
+Redirected to http://localhost:3000/edit/53f8a3094d616316581b0000
+Completed 302 Found in 533ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/edit/53f8a3094d616316581b0000" for 127.0.0.1 at 2014-08-23 11:19:53 -0300
+Processing by HomeController#edit as HTML
+  Parameters: {"id"=>"53f8a3094d616316581b0000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f8a3094d616316581b0000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.8570ms
+  Rendered home/edit.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 13ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/roleta/53f8a3094d616316581b0000/1" for 127.0.0.1 at 2014-08-23 11:19:57 -0300
+Processing by HomeController#roleta as HTML
+  Parameters: {"cola_id"=>"53f8a3094d616316581b0000", "cargo"=>"1"}
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f8a3094d616316581b0000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.1000ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=totals selector={"$query"=>{"uf"=>"DF", "cargo"=>"1"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.8330ms
+Completed 500 Internal Server Error in 17ms
+
+NoMethodError (undefined method `random_candidato' for #<HomeController:0x007ff96794ea18>):
+  app/controllers/home_controller.rb:50:in `roleta'
+
+
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (63.6ms)
+
+
+Started GET "/roleta/53f8a3094d616316581b0000/1" for 127.0.0.1 at 2014-08-23 11:19:57 -0300
+Processing by HomeController#roleta as HTML
+  Parameters: {"cola_id"=>"53f8a3094d616316581b0000", "cargo"=>"1"}
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f8a3094d616316581b0000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.2890ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=totals selector={"$query"=>{"uf"=>"DF", "cargo"=>"1"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.7450ms
+Completed 500 Internal Server Error in 9ms
+
+NoMethodError (undefined method `random_candidato' for #<HomeController:0x007ff961a40e90>):
+  app/controllers/home_controller.rb:50:in `roleta'
+
+
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.7ms)
+
+
+Started GET "/roleta/53f8a3094d616316581b0000/1" for 127.0.0.1 at 2014-08-23 11:20:21 -0300
+Processing by HomeController#roleta as HTML
+  Parameters: {"cola_id"=>"53f8a3094d616316581b0000", "cargo"=>"1"}
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f8a3094d616316581b0000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.9470ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=totals selector={"$query"=>{"uf"=>"DF", "cargo"=>"1"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.7700ms
+Completed 500 Internal Server Error in 1246ms
+
+ActionView::MissingTemplate (Missing template home/roleta, application/roleta with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/Users/popolin/workspace/colaeleitoral-web/app/views"
+):
+  actionview (4.1.4) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.1.4) lib/action_view/lookup_context.rb:124:in `find'
+  actionview (4.1.4) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.1.4) lib/action_view/renderer/template_renderer.rb:41:in `determine_template'
+  actionview (4.1.4) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.1.4) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.4) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.4) lib/action_view/rendering.rb:99:in `_render_template'
+  actionpack (4.1.4) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.1.4) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.4) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.1.4) lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  actionpack (4.1.4) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.1.4) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.1.4) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.1.4) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/popolin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.1.4) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.1.4) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.1.4) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.1.4) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.1.4) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.1.4) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.1.4) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.1.4) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.4) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.4) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.4) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.4) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.4) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.4) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.4) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.4) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/popolin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/popolin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/popolin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (0.6ms)
+
+
+Started GET "/roleta/53f8a3094d616316581b0000/1" for 127.0.0.1 at 2014-08-23 11:21:01 -0300
+Processing by HomeController#roleta as HTML
+  Parameters: {"cola_id"=>"53f8a3094d616316581b0000", "cargo"=>"1"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.8930ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f8a3094d616316581b0000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.8110ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=totals selector={"$query"=>{"uf"=>"DF", "cargo"=>"1"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6870ms
+  Rendered home/_popup_candidato.html.erb (1.2ms)
+  Rendered home/roleta.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 1206ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/coladas.css?body=1" for 127.0.0.1 at 2014-08-23 11:21:02 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-08-23 11:21:02 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-23 11:21:02 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-23 11:21:02 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-23 11:21:02 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-23 11:21:02 -0300
+
+
+Started GET "/assets/coladas.js?body=1" for 127.0.0.1 at 2014-08-23 11:21:02 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-08-23 11:21:02 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-23 11:21:02 -0300
+
+
+Started GET "/edit/53f8a3094d616316581b0000" for 127.0.0.1 at 2014-08-23 11:21:04 -0300
+Processing by HomeController#edit as HTML
+  Parameters: {"id"=>"53f8a3094d616316581b0000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 1.1030ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f8a3094d616316581b0000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.9980ms
+  Rendered home/edit.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 26ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/roleta/53f8a3094d616316581b0000/1" for 127.0.0.1 at 2014-08-23 11:21:06 -0300
+Processing by HomeController#roleta as HTML
+  Parameters: {"cola_id"=>"53f8a3094d616316581b0000", "cargo"=>"1"}
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f8a3094d616316581b0000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.0010ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=totals selector={"$query"=>{"uf"=>"DF", "cargo"=>"1"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.7230ms
+  Rendered home/_popup_candidato.html.erb (1.3ms)
+  Rendered home/roleta.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 1292ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/avalia/1511080/53f8a3094d616316581b0000/1/DF/y" for 127.0.0.1 at 2014-08-23 11:21:37 -0300
+
+ActionController::RoutingError (No route matches [GET] "/avalia/1511080/53f8a3094d616316581b0000/1/DF/y"):
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/popolin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/popolin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/popolin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.4ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.5ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (34.3ms)
+
+
+Started GET "/avalia/1511080/53f8a3094d616316581b0000/1/DF/y" for 127.0.0.1 at 2014-08-23 11:21:37 -0300
+
+ActionController::RoutingError (No route matches [GET] "/avalia/1511080/53f8a3094d616316581b0000/1/DF/y"):
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/popolin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/popolin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/popolin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.4ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (25.5ms)
+
+
+Started GET "/avalia/1511080/53f8a3094d616316581b0000/1/DF/y" for 127.0.0.1 at 2014-08-23 11:21:58 -0300
+
+AbstractController::ActionNotFound (The action 'avalia' could not be found for HomeController):
+  actionpack (4.1.4) lib/abstract_controller/base.rb:131:in `process'
+  actionview (4.1.4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.4) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.4) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.4) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/popolin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/popolin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/popolin/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.6ms)
+
+
+Started GET "/avalia/1511080/53f8a3094d616316581b0000/1/DF/y" for 127.0.0.1 at 2014-08-23 11:22:28 -0300
+Processing by HomeController#avalia as HTML
+  Parameters: {"candidato_id"=>"1511080", "cola_id"=>"53f8a3094d616316581b0000", "cargo_id"=>"1", "uf"=>"DF", "avaliacao"=>"y"}
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f8a3094d616316581b0000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.8730ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f8a3094d616316581b0000'), "cola_cargo._id"=>BSON::ObjectId('53f8a3094d616316581c0000')} update={"$set"=>{"cola_cargo.$.candidatos"=>["1511080"]}} flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.9620ms
+Redirected to http://localhost:3000/roleta/53f8a3094d616316581b0000/1
+Completed 302 Found in 21ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/roleta/53f8a3094d616316581b0000/1" for 127.0.0.1 at 2014-08-23 11:22:28 -0300
+Processing by HomeController#roleta as HTML
+  Parameters: {"cola_id"=>"53f8a3094d616316581b0000", "cargo"=>"1"}
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f8a3094d616316581b0000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.8130ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=totals selector={"$query"=>{"uf"=>"DF", "cargo"=>"1"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.9680ms
+  Rendered home/_popup_candidato.html.erb (0.3ms)
+  Rendered home/roleta.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 1327ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/coladas.css?body=1" for 127.0.0.1 at 2014-08-23 11:22:30 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-08-23 11:22:30 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-23 11:22:30 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-23 11:22:30 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-23 11:22:30 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-23 11:22:30 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-08-23 11:22:30 -0300
+
+
+Started GET "/assets/coladas.js?body=1" for 127.0.0.1 at 2014-08-23 11:22:30 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-23 11:22:30 -0300
+
+
+Started GET "/edit/53f8a3094d616316581b0000" for 127.0.0.1 at 2014-08-23 11:22:34 -0300
+Processing by HomeController#edit as HTML
+  Parameters: {"id"=>"53f8a3094d616316581b0000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6560ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f8a3094d616316581b0000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.8560ms
+  Rendered home/edit.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 513ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/candidatos/SP/1.json" for 127.0.0.1 at 2014-08-23 11:37:15 -0300
+Processing by HomeController#candidatos as JSON
+  Parameters: {"uf"=>"SP", "cargo_id"=>"1"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 1.1830ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=totals selector={"$query"=>{"uf"=>"SP", "cargo"=>"1"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4930ms
+  MOPED: 127.0.0.1:27017 INSERT       database=colaeleitoral collection=totals documents=[{"_id"=>BSON::ObjectId('53f8a71d4d616321ee000000'), "quantidade"=>11, "uf"=>"SP", "cargo"=>"1"}] flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 1.0150ms
+Completed 200 OK in 2999ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/candidatos/SP/3.json" for 127.0.0.1 at 2014-08-23 11:37:55 -0300
+Processing by HomeController#candidatos as JSON
+  Parameters: {"uf"=>"SP", "cargo_id"=>"3"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.7740ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=totals selector={"$query"=>{"uf"=>"SP", "cargo"=>"3"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 1.2090ms
+  MOPED: 127.0.0.1:27017 INSERT       database=colaeleitoral collection=totals documents=[{"_id"=>BSON::ObjectId('53f8a7444d616321ee010000'), "quantidade"=>9, "uf"=>"SP", "cargo"=>"3"}] flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.8640ms
+Completed 200 OK in 1871ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/candidatos/SP/5.json" for 127.0.0.1 at 2014-08-23 11:38:03 -0300
+Processing by HomeController#candidatos as JSON
+  Parameters: {"uf"=>"SP", "cargo_id"=>"5"}
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=totals selector={"$query"=>{"uf"=>"SP", "cargo"=>"5"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6800ms
+  MOPED: 127.0.0.1:27017 INSERT       database=colaeleitoral collection=totals documents=[{"_id"=>BSON::ObjectId('53f8a74c4d616321ee020000'), "quantidade"=>11, "uf"=>"SP", "cargo"=>"5"}] flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.8820ms
+Completed 200 OK in 1984ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/candidatos/SP/6.json" for 127.0.0.1 at 2014-08-23 11:39:08 -0300
+Processing by HomeController#candidatos as JSON
+  Parameters: {"uf"=>"SP", "cargo_id"=>"6"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6790ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=totals selector={"$query"=>{"uf"=>"SP", "cargo"=>"6"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6170ms

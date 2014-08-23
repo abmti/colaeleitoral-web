@@ -8,6 +8,7 @@ class ColaCargo
   field :nome_cargo, type: String
   field :candidatos, type: Array
   
+  attr_accessor :detalhes_candidatos
   
   
 end

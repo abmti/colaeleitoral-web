@@ -1,0 +1,69 @@
+
+<div class="container">
+  <div class="row">
+  	<div class="col-md-6">
+    
+      <div class="panel panel-default">
+			<div class="panel-body">
+
+				<h1>Cola de votação</h1>
+				<p>
+					URL de edição: <%= link_edit(@cola.id) %>
+					<br />
+					URL de visualização: <%= link_view(@cola.id) %>
+				</p>
+				
+				<% @cola.cola_cargo.each do |c| %>
+					<div class="row">
+						<%= c.nome_cargo %>
+						<%= link_to "+", "/roleta/#{@cola.id}/#{c.id_cargo}", class: "btn btn-default" %>
+						
+						<% if c.detalhes_candidatos != nil && c.detalhes_candidatos.length > 0 %>
+							<% c.detalhes_candidatos.each do |candidato| %>
+								<div class="row">
+									<div class="col-sm-2">
+										<a href="javascript:abre_detalhes('<%= candidato["id"] %>')">
+											<img src="<%= candidato["foto"] %>" alt="" class="center-block img-responsive" >
+										</a>
+									</div>
+									<div class="col-sm-6">
+										<a href="javascript:abre_detalhes('<%= candidato["id"] %>')">
+											<%= candidato["apelido"] %>
+										</a>
+									</div>
+									<div class="col-sm-2">
+										<%= candidato["numero"] %>
+									</div>
+									<div class="col-sm-1">
+										<%= link_to "X", "/remove/#{@cola.id}/#{c.id}/#{candidato['id']}", class: "btn btn-danger"  %>
+									</div>
+								</div>
+							<% end %>
+						<% else %>
+							<br />Nenhum candidato selecionado
+						<% end %>
+					</div>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+<a href="" id="link_modal" data-toggle="modal" data-target="#myModal"></a>
+
+<div id="popup">
+</div>
+
+<script>
+	function abre_detalhes(id){
+		$.ajax({
+			url: '/detalhe_candidato/' + id + '.js',
+			type: 'GET',
+			data: { }
+	  	});
+	}
+</script>
+
+
+

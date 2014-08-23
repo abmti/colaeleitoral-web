@@ -9519,3 +9519,156 @@ Processing by HomeController#detalhe_candidato as JS
   Rendered home/_popup_candidato.html.erb (0.4ms)
   Rendered home/detalhe_candidato.js.erb (1.6ms)
 Completed 200 OK in 488ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-23 17:57:57 -0300
+Processing by HomeController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.8970ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=estados selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 2.0540ms
+  Rendered home/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cola/DF/" for 127.0.0.1 at 2014-08-23 17:57:58 -0300
+Processing by HomeController#cola as HTML
+  Parameters: {"uf"=>"DF"}
+  MOPED: 127.0.0.1:27017 INSERT       database=colaeleitoral collection=colas documents=[{"_id"=>BSON::ObjectId('53f900574d61635d0c000000'), "device_id"=>nil, "uf"=>"DF"}] flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.9710ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f900574d61635d0c000000')} update={"$push"=>{"cola_cargo"=>{"_id"=>BSON::ObjectId('53f900574d61635d0c010000'), "id_cargo"=>"1", "nome_cargo"=>"Presidente", "candidatos"=>[]}}} flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 1.0490ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f900574d61635d0c000000')} update={"$push"=>{"cola_cargo"=>{"_id"=>BSON::ObjectId('53f900574d61635d0c020000'), "id_cargo"=>"3", "nome_cargo"=>"Governador", "candidatos"=>[]}}} flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 1.0010ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f900574d61635d0c000000')} update={"$push"=>{"cola_cargo"=>{"_id"=>BSON::ObjectId('53f900574d61635d0c030000'), "id_cargo"=>"5", "nome_cargo"=>"Senador", "candidatos"=>[]}}} flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.8550ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f900574d61635d0c000000')} update={"$push"=>{"cola_cargo"=>{"_id"=>BSON::ObjectId('53f900574d61635d0c040000'), "id_cargo"=>"6", "nome_cargo"=>"Deputado Federal", "candidatos"=>[]}}} flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.8860ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f900574d61635d0c000000')} update={"$push"=>{"cola_cargo"=>{"_id"=>BSON::ObjectId('53f900574d61635d0c050000'), "id_cargo"=>"8", "nome_cargo"=>"Deputado Distrital", "candidatos"=>[]}}} flags=[]
+                         COMMAND      database=colaeleitoral command={:getlasterror=>1, :w=>1} runtime: 0.7440ms
+Redirected to http://localhost:3000/edit/53f900574d61635d0c000000
+Completed 302 Found in 521ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/edit/53f900574d61635d0c000000" for 127.0.0.1 at 2014-08-23 17:57:59 -0300
+Processing by HomeController#edit as HTML
+  Parameters: {"id"=>"53f900574d61635d0c000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f900574d61635d0c000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.8120ms
+  Rendered home/edit.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 15ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/roleta/53f900574d61635d0c000000/3/n" for 127.0.0.1 at 2014-08-23 17:58:00 -0300
+Processing by HomeController#roleta as HTML
+  Parameters: {"cola_id"=>"53f900574d61635d0c000000", "cargo"=>"3", "partido"=>"n"}
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f900574d61635d0c000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.3310ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=totals selector={"$query"=>{"uf"=>"DF", "cargo"=>"3"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 1.0850ms
+  Rendered home/_popup_candidato.html.erb (0.3ms)
+  Rendered home/roleta.html.erb within layouts/application (483.9ms)
+Completed 200 OK in 1583ms (Views: 525.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/avalia/1511987/53f900574d61635d0c000000/3/DF/n/1" for 127.0.0.1 at 2014-08-23 17:58:10 -0300
+Processing by HomeController#avalia as HTML
+  Parameters: {"candidato_id"=>"1511987", "cola_id"=>"53f900574d61635d0c000000", "cargo_id"=>"3", "uf"=>"DF", "avaliacao"=>"n", "partido"=>"1"}
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f900574d61635d0c000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.9380ms
+Redirected to http://localhost:3000/roleta/53f900574d61635d0c000000/3/1
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/roleta/53f900574d61635d0c000000/3/1" for 127.0.0.1 at 2014-08-23 17:58:10 -0300
+Processing by HomeController#roleta as HTML
+  Parameters: {"cola_id"=>"53f900574d61635d0c000000", "cargo"=>"3", "partido"=>"1"}
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f900574d61635d0c000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.8190ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=totals selector={"$query"=>{"uf"=>"DF", "cargo"=>"3"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6600ms
+  Rendered home/_popup_candidato.html.erb (0.3ms)
+  Rendered home/roleta.html.erb within layouts/application (476.5ms)
+Completed 200 OK in 993ms (Views: 487.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/coladas.css?body=1" for 127.0.0.1 at 2014-08-23 17:58:11 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-23 17:58:11 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-23 17:58:11 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-23 17:58:11 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-23 17:58:11 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-08-23 17:58:11 -0300
+
+
+Started GET "/assets/coladas.js?body=1" for 127.0.0.1 at 2014-08-23 17:58:11 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-08-23 17:58:11 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-23 17:58:11 -0300
+
+
+Started GET "/avalia/1512839/53f900574d61635d0c000000/3/DF/n/44" for 127.0.0.1 at 2014-08-23 17:58:16 -0300
+Processing by HomeController#avalia as HTML
+  Parameters: {"candidato_id"=>"1512839", "cola_id"=>"53f900574d61635d0c000000", "cargo_id"=>"3", "uf"=>"DF", "avaliacao"=>"n", "partido"=>"44"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.9550ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f900574d61635d0c000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.8270ms
+Redirected to http://localhost:3000/roleta/53f900574d61635d0c000000/3/44
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/roleta/53f900574d61635d0c000000/3/44" for 127.0.0.1 at 2014-08-23 17:58:16 -0300
+Processing by HomeController#roleta as HTML
+  Parameters: {"cola_id"=>"53f900574d61635d0c000000", "cargo"=>"3", "partido"=>"44"}
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f900574d61635d0c000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.8200ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=totals selector={"$query"=>{"uf"=>"DF", "cargo"=>"3"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.7300ms
+Completed 500 Internal Server Error in 439ms
+
+TypeError (no implicit conversion from nil to integer):
+  app/controllers/home_controller.rb:102:in `roleta'
+
+
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/popolin/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.5ms)
+
+
+Started GET "/roleta/53f900574d61635d0c000000/3/44" for 127.0.0.1 at 2014-08-23 18:00:49 -0300
+Processing by HomeController#roleta as HTML
+  Parameters: {"cola_id"=>"53f900574d61635d0c000000", "cargo"=>"3", "partido"=>"44"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.8590ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f900574d61635d0c000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.7540ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=totals selector={"$query"=>{"uf"=>"DF", "cargo"=>"3"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.7490ms
+  Rendered home/roleta.html.erb within layouts/application (493.5ms)
+Completed 200 OK in 987ms (Views: 504.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/coladas.css?body=1" for 127.0.0.1 at 2014-08-23 18:00:50 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-23 18:00:50 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-08-23 18:00:50 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-23 18:00:50 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-23 18:00:50 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-23 18:00:50 -0300
+
+
+Started GET "/assets/coladas.js?body=1" for 127.0.0.1 at 2014-08-23 18:00:50 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-08-23 18:00:50 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-23 18:00:50 -0300

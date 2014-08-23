@@ -99,7 +99,11 @@ class HomeController < ApplicationController
     @partido = params[:partido]
     rand = rand(0 .. (Total.consulta(@cola.uf, params[:cargo]).quantidade / 10) )
     candidatos = random_candidato(params[:cargo], @cola.uf, @partido, rand)
-    @candidato = candidatos[rand(0 .. candidatos.length-1 )]
+    if candidatos != nil && candidatos.length > 0
+      @candidato = candidatos[rand(0 .. candidatos.length-1 )]
+    else
+      @candidato = nil
+    end
     puts @candidato
   end
   

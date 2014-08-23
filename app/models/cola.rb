@@ -8,4 +8,18 @@ class Cola
   field :device_id, type: String
   field :uf, type: String
   
+  def as_json_cola
+    retorno = self.as_json
+    retorno[:cola_cargo] = Array.new
+    cola_cargo.each do |cola|
+      cc = cola.as_json
+      cc[:candidatos] = Array.new
+      cola.detalhes_candidatos.each do |cand|
+        cc[:candidatos] << cand
+      end
+      retorno[:cola_cargo] << cc
+    end
+    retorno
+  end
+  
 end

@@ -36,6 +36,17 @@ class HomeController < ApplicationController
     end
   end
   
+  def remove
+    cola = Colada.find(params[:cola_id])
+    cola_cargo = cola.cola_cargo.where(id: params[:cola_cargo_id]).first
+    cola_cargo.candidatos.delete(params[:candidato_id])
+    cola_cargo.save
+    respond_to do |format|
+      format.html { redirect_to edit_path(cola.id) }
+      format.json { render :json => {status: "ok"} }
+    end
+  end
+  
   def estados
     respond_to do |format|
         format.json { render :json => lista_estados }

@@ -11,6 +11,7 @@ ColaeleitoralWeb::Application.routes.draw do
   get 'candidatos/:uf/:cargo_id', to: 'home#candidatos', as: 'candidatos'
   get 'roleta/:cola_id/:cargo', to: 'home#roleta', as: 'roleta'
   get 'avalia/:candidato_id/:cola_id/:cargo_id/:uf/:avaliacao', to: 'home#avalia', as: 'avalia'
+  get 'remove/:cola_id/:cola_cargo_id/:candidato_id', to: 'home#remove', as: 'remove'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

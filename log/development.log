@@ -9691,3 +9691,84 @@ Processing by HomeController#roleta as HTML
   Rendered home/_popup_candidato.html.erb (0.3ms)
   Rendered home/roleta.html.erb within layouts/application (502.1ms)
 Completed 200 OK in 2235ms (Views: 511.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/edit/53f900574d61635d0c000000" for 127.0.0.1 at 2014-08-23 18:22:50 -0300
+Processing by HomeController#edit as HTML
+  Parameters: {"id"=>"53f900574d61635d0c000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6670ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f900574d61635d0c000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.7070ms
+  Rendered home/edit.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 33ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/edit/53f900574d61635d0c000000" for 127.0.0.1 at 2014-08-23 18:25:49 -0300
+Processing by HomeController#edit as HTML
+  Parameters: {"id"=>"53f900574d61635d0c000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6760ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f900574d61635d0c000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.7960ms
+  Rendered home/edit.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 17ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/coladas.css?body=1" for 127.0.0.1 at 2014-08-23 18:25:49 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-23 18:25:49 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-23 18:25:49 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-08-23 18:25:49 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-23 18:25:49 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-23 18:25:49 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-08-23 18:25:49 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-23 18:25:49 -0300
+
+
+Started GET "/assets/coladas.js?body=1" for 127.0.0.1 at 2014-08-23 18:25:49 -0300
+
+
+Started GET "/edit/53f900574d61635d0c000000" for 127.0.0.1 at 2014-08-23 18:27:06 -0300
+Processing by HomeController#edit as HTML
+  Parameters: {"id"=>"53f900574d61635d0c000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.8940ms
+  MOPED: 127.0.0.1:27017 QUERY        database=colaeleitoral collection=colas selector={"_id"=>BSON::ObjectId('53f900574d61635d0c000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.7370ms
+  Rendered home/edit.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 18ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/coladas.css?body=1" for 127.0.0.1 at 2014-08-23 18:27:06 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-08-23 18:27:06 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-23 18:27:06 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-23 18:27:06 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-23 18:27:06 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-23 18:27:06 -0300
+
+
+Started GET "/assets/coladas.js?body=1" for 127.0.0.1 at 2014-08-23 18:27:06 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-08-23 18:27:06 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-23 18:27:06 -0300

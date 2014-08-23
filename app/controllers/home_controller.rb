@@ -37,7 +37,7 @@ class HomeController < ApplicationController
   end
   
   def remove
-    cola = Colada.find(params[:cola_id])
+    cola = Cola.find(params[:cola_id])
     cola_cargo = cola.cola_cargo.where(id: params[:cola_cargo_id]).first
     cola_cargo.candidatos.delete(params[:candidato_id])
     cola_cargo.save

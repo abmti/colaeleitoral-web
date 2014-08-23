@@ -1,0 +1,2 @@
+module ColadasHelper
+end

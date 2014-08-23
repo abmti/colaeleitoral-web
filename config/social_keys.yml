@@ -1,0 +1,9 @@
+
+development:
+  transparencia_token: "CAMaf07DbAma"
+  
+test:
+  transparencia_token: "CAMaf07DbAma"
+  
+production:
+  transparencia_token: "CAMaf07DbAma"

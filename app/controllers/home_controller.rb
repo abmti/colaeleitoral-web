@@ -36,6 +36,12 @@ class HomeController < ApplicationController
     end
   end
   
+  def partidos
+    respond_to do |format|
+        format.json { render :json => lista_partidos }
+    end
+  end
+  
   def detalhe_candidato
     @candidato = detalhes_candidato(params[:candidato_id])
   end

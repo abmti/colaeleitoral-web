@@ -1,7 +1,7 @@
 
 <div class="container">
   <div class="row">
-  	<div class="col-md-6">
+  	<div class="col-md-8">
     
       <div class="panel panel-default">
 			<div class="panel-body">
@@ -9,24 +9,24 @@
 				<h1>Cola de votação</h1>
 				
 				<% @cola.cola_cargo.each do |c| %>
-					<div class="row">
+					<div class="row" style="background-color: #<%= cor_cargo(c.detalhes_candidatos.length) %>;">
 						<%= c.nome_cargo %>
 						
 						<% if c.detalhes_candidatos != nil && c.detalhes_candidatos.length > 0 %>
 							<% c.detalhes_candidatos.each do |candidato| %>
 								<div class="row">
-									<div class="col-sm-2">
+									<div class="col-sm-1">
 										<a href="javascript:abre_detalhes('<%= candidato["id"] %>')">
 											<img src="<%= candidato["foto"] %>" alt="" class="center-block img-responsive" >
 										</a>
 									</div>
 									<div class="col-sm-6">
 										<a href="javascript:abre_detalhes('<%= candidato["id"] %>')">
-											<%= candidato["apelido"] %>
+											<%= candidato["apelido"] %> (<%= candidato["numero"] %>)
 										</a>
 									</div>
-									<div class="col-sm-4">
-										<%= candidato["numero"] %>
+									<div class="col-sm-2">
+										<%= candidato["partido"] %>
 									</div>
 								</div>
 							<% end %>

@@ -40,4 +40,5 @@ gem 'spring',        group: :development
 
 gem 'httparty'
 gem "mongoid", "~> 4.0.0"
+gem 'capistrano', '~> 3.2.0'
 

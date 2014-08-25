@@ -45,7 +45,6 @@ namespace :deploy do
     on roles(:app), in: :sequence, wait: 5 do
       # Your restart mechanism here, for example:
       # execute :touch, "#{release_path}/tmp/restart.txt"
-      sh 'RAILS_ENV=development bundle exec rake "service:notify"'
       execute :cp, "#{deploy_to}/mongoid.yml", "#{release_path}/config/mongoid.yml"
       execute :mkdir, '-p', "#{release_path}/tmp"
       execute :touch, "#{release_path}/tmp/restart.txt"

@@ -95,7 +95,7 @@ class HomeController < ApplicationController
   def candidatos
     respond_to do |format|
       rand = rand(0 .. (Total.consulta(params[:uf], params[:cargo_id]).quantidade / 10) )
-      format.json { render :json => lista_candidatos(params[:cargo_id], params[:uf], rand) }
+      format.json { render :json => lista_candidatos(params[:cargo_id], params[:uf], params[:partido], rand) }
     end
   end
   

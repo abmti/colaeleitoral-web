@@ -10,6 +10,7 @@ ColaeleitoralWeb::Application.routes.draw do
   get 'edit/:id', to: 'home#edit', as: 'edit'
   get 'v/:id', to: 'home#view', as: 'view'
   get 'candidatos/:uf/:cargo_id', to: 'home#candidatos', as: 'candidatos'
+  get 'candidatos/:uf/:cargo_id/:partido', to: 'home#candidatos', as: 'candidatos_partido'
   get 'roleta/:cola_id/:cargo/:partido', to: 'home#roleta', as: 'roleta'
   get 'avalia/:candidato_id/:cola_id/:cargo_id/:uf/:avaliacao/:partido', to: 'home#avalia', as: 'avalia'
   get 'remove/:cola_id/:cola_cargo_id/:candidato_id', to: 'home#remove', as: 'remove'

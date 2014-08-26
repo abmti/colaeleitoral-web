@@ -17,8 +17,12 @@ module HomeHelper
     candidato
   end
   
-  def lista_candidatos(cargo_id, uf, page)
-    candidatos = HTTParty.get("http://api.transparencia.org.br/api/v1/candidatos?estado=#{uf}&cargo=#{cargo_id}&_limit=10&_offset=#{page}", :headers => { "App-Token" => ENV['TRANSPARENCIA_TOKEN'] } )
+  def lista_candidatos(cargo_id, uf, partido, page)
+    if partido.strip.length > 0 && partido != "n"
+      candidatos = HTTParty.get("http://api.transparencia.org.br/api/v1/candidatos?estado=#{uf}&partido=#{partido}&cargo=#{cargo_id}&_limit=10&_offset=#{page}", :headers => { "App-Token" => ENV['TRANSPARENCIA_TOKEN'] } )
+    else
+      candidatos = HTTParty.get("http://api.transparencia.org.br/api/v1/candidatos?estado=#{uf}&cargo=#{cargo_id}&_limit=10&_offset=#{page}", :headers => { "App-Token" => ENV['TRANSPARENCIA_TOKEN'] } )
+    end
     candidatos
   end
   

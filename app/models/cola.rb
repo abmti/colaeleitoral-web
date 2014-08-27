@@ -14,8 +14,10 @@ class Cola
     cola_cargo.each do |cola|
       cc = cola.as_json
       cc[:candidatos] = Array.new
-      cola.detalhes_candidatos.each do |cand|
-        cc[:candidatos] << cand
+      if cola.detalhes_candidatos
+        cola.detalhes_candidatos.each do |cand|
+          cc[:candidatos] << cand
+        end
       end
       retorno[:cola_cargo] << cc
     end

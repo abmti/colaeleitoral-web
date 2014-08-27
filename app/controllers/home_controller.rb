@@ -21,11 +21,10 @@ class HomeController < ApplicationController
       @cola = Cola.new
       @cola.device_id = device_id
       @cola.uf = params[:uf]
-      @cola.save
       cargos.each do |c|
         cc = @cola.cola_cargo.build({id_cargo: c["cargoId"], nome_cargo: c["nome"], candidatos: Array.new})
-        cc.save
       end
+      @cola.save
     end
     
     respond_to do |format|
